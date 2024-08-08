@@ -16,6 +16,7 @@ builder.Services.AddDbContext<DataContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("defaultConnection"));
 });
 builder.Services.AddScoped<TodoService, TodoService>();
+builder.Services.AddScoped<ProductsService, ProductsService>();
 
 var app = builder.Build();
 
